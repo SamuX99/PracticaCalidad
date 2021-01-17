@@ -92,7 +92,7 @@ public class CalculosTest {
 				Calculos c3 = new Calculos(10.765,0,2.425);
 				System.out.println("Resultado esperado = Null");
 				System.out.println("Resultado real = " + c3.multi() + "\n");
-				assertNotNull(c3.multi());
+				assertNull(c3.multi());
 			}
 			
 			//Assert Same
