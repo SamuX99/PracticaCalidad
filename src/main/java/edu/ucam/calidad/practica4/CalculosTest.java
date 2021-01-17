@@ -34,7 +34,7 @@ public class CalculosTest {
 				Calculos c4 = new Calculos(10.765, 5.647, 1);
 				System.out.println("Resultado esperado = 2.9063219408535506");
 				System.out.println("Resultado real = " + c4.dividir() + "\n");
-				assertEquals(c4.dividir(), 2.9063219408535506);
+				assertEquals(c4.dividir(), 1.9063219408535506);
 			}	
 			
 			//Assert True
@@ -63,7 +63,7 @@ public class CalculosTest {
 				Calculos c1 = new Calculos(8.765, 12.647, -30.425);
 				System.out.println("Resultado esperado != -9.013000000000002");
 				System.out.println("Resultado real = " + c1.suma() + "\n");
-				assertFalse(c1.suma() == -9.013000000000002);
+				assertFalse(c1.suma() != -9.013000000000002);
 			}
 			
 			@Test
@@ -72,7 +72,7 @@ public class CalculosTest {
 				Calculos c2 = new Calculos(-50.765, -10.647, 9.425);
 				System.out.println("Resultado esperado < -59.543");
 				System.out.println("Resultado real = " + c2.resta() + "\n");
-				assertFalse(c2.resta() > -59.543);
+				assertFalse(c2.resta() < -59.543);
 			}
 			
 			//Assert Not Null
@@ -92,14 +92,14 @@ public class CalculosTest {
 				Calculos c3 = new Calculos(10.765,0,2.425);
 				System.out.println("Resultado esperado = Null");
 				System.out.println("Resultado real = " + c3.multi() + "\n");
-				assertNull(c3.multi());
+				assertNotNull(c3.multi());
 			}
 			
 			//Assert Same
 			@Test
 			public void StringCal() {
 				System.out.println("Assert Same String: ");
-				Calculos c5 = new Calculos("Jose");
+				Calculos c5 = new Calculos("Manuel");
 				System.out.println("Resultado esperado = Manuel");
 				System.out.println("Resultado real = " + c5.nombre() + "\n");
 				assertSame(c5.nombre(), "Manuel");
